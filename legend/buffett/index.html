@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+    // 배포 경로 자동 감지: https://아이디.github.io/저장소/ 또는 커스텀 도메인(/)
+    (function () {
+      var routes = ["quiz","result","legends","legend","journey","library","me","about","privacy","terms","academy","test","index.html","404.html"];
+      var seg = location.pathname.split("/")[1] || "";
+      var b = "/";
+      if (/\.github\.io$/i.test(location.hostname) && seg && routes.indexOf(seg) < 0) b = "/" + seg + "/";
+      window.__INVTI_BASE__ = b;
+      document.write('<base href="' + b + '">');var l=document.createElement("link");l.rel="stylesheet";l.crossOrigin="";l.href=b+"assets/index-DlvK9Roz.css";document.head.appendChild(l);var s=document.createElement("script");s.type="module";s.crossOrigin="";s.src=b+"assets/index-Bl-v2ujk.js";document.head.appendChild(s);
+    })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <script>
+    // 저장된 화면 테마를 첫 렌더 전에 적용 (깜빡임 방지)
+    try { var t = localStorage.getItem("invti-theme"); if (t === "dark" || (t === "system" && matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.classList.add("dark"); } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500;600&family=Silkscreen&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <title>INVTI | 나는 어떤 투자 대가와 닮았을까?</title>
+    <meta name="description" content="12개의 질문으로 나와 닮은 투자 대가와 투자 성향을 발견하는 교육용 매칭 게임">
+    <meta name="author" content="inuti" />
+    <meta name="theme-color" content="#f5f3ee">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="INVTI">
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_5q6cqwqh5087vr6mj5d4crmj74/9c56fef672ed7ed0b7faf2a57e941619_1789630195401.png">
+
+    <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_5q6cqwqh5087vr6mj5d4crmj74/9c56fef672ed7ed0b7faf2a57e941619_1789630195401.png">
+    <meta property="og:title" content="나는 어떤 투자 대가와 닮았을까?">
+    <meta name="twitter:title" content="나는 어떤 투자 대가와 닮았을까?">
+    <meta property="og:description" content="12개의 질문으로 나와 닮은 투자 대가와 투자 성향을 발견하는 교육용 매칭 게임">
+    <meta name="twitter:description" content="12개의 질문으로 나와 닮은 투자 대가와 투자 성향을 발견하는 교육용 매칭 게임">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

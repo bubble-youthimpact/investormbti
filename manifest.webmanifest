@@ -1,0 +1,34 @@
+{
+  "id": "./",
+  "name": "INVTI - 나와 닮은 투자 대가 찾기",
+  "short_name": "INVTI",
+  "description": "12개의 질문으로 나와 닮은 투자 대가를 찾는 교육용 성향 테스트",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f3ee",
+  "theme_color": "#f5f3ee",
+  "orientation": "portrait",
+  "scope": "./",
+  "lang": "ko",
+  "categories": ["finance", "lifestyle", "entertainment"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

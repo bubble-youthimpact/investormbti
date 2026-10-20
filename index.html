@@ -1,72 +1,50 @@
 <!doctype html>
-<html lang="ko" data-lang="ko" data-title-ko="INVTI | 나와 닮은 투자 대가 찾기" data-title-en="INVTI | Find your investing legend">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<script>(function(){var l;try{var q=new URLSearchParams(location.search).get("lang");if(q==="ko"||q==="en"){l=q;localStorage.setItem("invti-lang",q)}else{l=localStorage.getItem("invti-lang")}}catch(e){}if(l!=="ko"&&l!=="en"){l=(navigator.language||"").toLowerCase().indexOf("ko")===0?"ko":"en"}document.documentElement.setAttribute("data-lang",l);document.documentElement.setAttribute("lang",l)})();</script>
-<title>INVTI | 나와 닮은 투자 대가 찾기</title>
-<meta name="description" content="INVTI — 12개의 질문으로 나와 닮은 투자 대가를 찾는 교육용 게임">
-<meta name="theme-color" content="#f5f3ee">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-<header class="site-header">
-  <div class="wrap wide">
-    <a class="brand" href="" aria-label="INVTI"><img src="assets/logo.png" alt="INVTI" width="56" height="26"></a>
-    <nav class="nav" aria-label="Main"><a href="" aria-current="page"><span data-l="ko">홈</span><span data-l="en">Home</span></a><a href="privacy/"><span data-l="ko">개인정보처리방침</span><span data-l="en">Privacy Policy</span></a><a href="terms/"><span data-l="ko">이용약관</span><span data-l="en">Terms of Service</span></a></nav>
-    <button class="lang-pill" type="button" aria-label="Change language / 언어 변경"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span class="lang-code">KO</span></button>
-    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-  </div>
-</header>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+    // 배포 경로 자동 감지: https://아이디.github.io/저장소/ 또는 커스텀 도메인(/)
+    (function () {
+      var routes = ["quiz","result","legends","legend","journey","library","me","about","privacy","terms","academy","test","index.html","404.html"];
+      var seg = location.pathname.split("/")[1] || "";
+      var b = "/";
+      if (/\.github\.io$/i.test(location.hostname) && seg && routes.indexOf(seg) < 0) b = "/" + seg + "/";
+      window.__INVTI_BASE__ = b;
+      document.write('<base href="' + b + '">');var l=document.createElement("link");l.rel="stylesheet";l.crossOrigin="";l.href=b+"assets/index-DlvK9Roz.css";document.head.appendChild(l);var s=document.createElement("script");s.type="module";s.crossOrigin="";s.src=b+"assets/index-Bl-v2ujk.js";document.head.appendChild(s);
+    })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <script>
+    // 저장된 화면 테마를 첫 렌더 전에 적용 (깜빡임 방지)
+    try { var t = localStorage.getItem("invti-theme"); if (t === "dark" || (t === "system" && matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.classList.add("dark"); } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500;600&family=Silkscreen&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <title>INVTI | 나는 어떤 투자 대가와 닮았을까?</title>
+    <meta name="description" content="12개의 질문으로 나와 닮은 투자 대가와 투자 성향을 발견하는 교육용 매칭 게임">
+    <meta name="author" content="inuti" />
+    <meta name="theme-color" content="#f5f3ee">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="INVTI">
 
-<div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu">
-  <div class="mm-top">
-    <a href="" aria-label="INVTI"><img src="assets/logo.png" alt="INVTI" width="56" height="26"></a>
-    <button class="mm-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  </div>
-  <div class="segmented" role="group" aria-label="Language">
-    <button type="button" data-set-lang="ko" aria-pressed="false">한국어</button>
-    <button type="button" data-set-lang="en" aria-pressed="false">English</button>
-  </div>
-  <ul class="mm-links"><li><a href=""><span data-l="ko">홈</span><span data-l="en">Home</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="privacy/"><span data-l="ko">개인정보처리방침</span><span data-l="en">Privacy Policy</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li><li><a href="terms/"><span data-l="ko">이용약관</span><span data-l="en">Terms of Service</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li></ul>
-</div>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
 
-<main>
-<div class="wrap">
-  <section class="hero">
-    <img class="hero-mark" src="assets/logo.png" alt="INVTI" width="120" height="56">
-    <p class="eyebrow">Investor MBTI</p>
-    <h1><span data-l="ko">나는 어떤 투자 대가와 닮았을까?</span><span data-l="en">Which investing legend are you most like?</span></h1>
-    <p class="lead"><span data-l="ko">12개의 질문으로 나와 닮은 투자 대가와 투자 성향을 발견하고, 그 대가처럼 매일 10분 투자 공부를 이어가는 교육용 게임입니다.</span><span data-l="en">An educational game: answer 12 questions to find the investing legend most like you, then keep learning their way, 10 minutes a day.</span></p>
-    <div class="rule"></div>
-  </section>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_5q6cqwqh5087vr6mj5d4crmj74/9c56fef672ed7ed0b7faf2a57e941619_1789630195401.png">
 
-  <div class="facts">
-    <div class="fact"><b>12</b><span><span data-l="ko">개의 질문</span><span data-l="en">questions</span></span></div>
-    <div class="fact"><b>6</b><span><span data-l="ko">명의 투자 대가 유형</span><span data-l="en">investing legend types</span></span></div>
-    <div class="fact"><b><span data-l="ko">0원</span><span data-l="en">Free</span></b><span><span data-l="ko">회원가입 없이 무료</span><span data-l="en">No sign-up needed</span></span></div>
-  </div>
+    <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_5q6cqwqh5087vr6mj5d4crmj74/9c56fef672ed7ed0b7faf2a57e941619_1789630195401.png">
+    <meta property="og:title" content="나는 어떤 투자 대가와 닮았을까?">
+    <meta name="twitter:title" content="나는 어떤 투자 대가와 닮았을까?">
+    <meta property="og:description" content="12개의 질문으로 나와 닮은 투자 대가와 투자 성향을 발견하는 교육용 매칭 게임">
+    <meta name="twitter:description" content="12개의 질문으로 나와 닮은 투자 대가와 투자 성향을 발견하는 교육용 매칭 게임">
+  </head>
 
-  <div class="cards">
-    <a class="card-link" href="privacy/"><span><strong><span data-l="ko">개인정보처리방침</span><span data-l="en">Privacy Policy</span></strong><small><span data-l="ko">어떤 정보를 저장하고, 무엇을 저장하지 않는지</span><span data-l="en">What we store, and what we never collect</span></small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <a class="card-link" href="terms/"><span><strong><span data-l="ko">이용약관</span><span data-l="en">Terms of Service</span></strong><small><span data-l="ko">서비스 이용 조건과 책임의 범위</span><span data-l="en">Conditions of use and responsibilities</span></small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-  </div>
-
-  <p class="notice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><span><span data-l="ko">INVTI는 교육용 콘텐츠이며 투자 조언이 아닙니다. 실제 투자자의 보증·제휴를 의미하지 않습니다.</span><span data-l="en">INVTI is educational content, not investment advice. It does not imply endorsement by or affiliation with any real investor.</span></span></p>
-</div>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap wide">
-    <span>© 2026 INVTI</span>
-    <nav aria-label="Legal"><a href="privacy/"><span data-l="ko">개인정보처리방침</span><span data-l="en">Privacy Policy</span></a><a href="terms/"><span data-l="ko">이용약관</span><span data-l="en">Terms of Service</span></a></nav>
-  </div>
-</footer>
-<script src="assets/site.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
