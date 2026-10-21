@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.investormbti.twa",
+    "sha256_cert_fingerprints": ["8B:03:B0:DD:E7:1D:72:D6:4D:7C:93:3C:AE:77:A2:27:65:A4:38:54:60:17:EF:81:F7:DA:60:49:6B:F5:5A:BD"]
+  }
+}]
